@@ -1,41 +1,20 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
- @plugin "daisyui" {
-   themes: light --default, dark --prefersdark;
- }
  
-@plugin "daisyui/theme" {
-  name: "light";
-  default: true;
-  prefersdark: true;
-  color-scheme: "light";
-  --color-base-100: #fffeff;
-  --color-base-200: oklch(98% 0 0);
-  --color-base-300: oklch(95% 0 0);
-  --color-base-content: oklch(21% 0.006 285.885);
-  --color-primary: oklch(98% 0.003 247.858);
-  --color-primary-content: #010e25;
-  --color-secondary: #010e25;
-  --color-secondary-content: #fffeff;
-  --color-accent: #98a0c8;
-  --color-accent-content: #243789;
-  --color-neutral: #6e6a70;
-  --color-neutral-content: #fffeff;
-  --color-info: #4a5996;
-  --color-info-content: #fffeff;
-  --color-success: #ace9b9;
-  --color-success-content: oklch(37% 0.077 168.94);
-  --color-warning: oklch(82% 0.189 84.429);
-  --color-warning-content: oklch(41% 0.112 45.904);
-  --color-error: oklch(72% 0.172 25.800);
-  --color-error-content: oklch(27% 0.105 12.094);
-  --radius-selector: 2rem;
-  --radius-field: 2rem;
-  --radius-box: 2rem;
-  --size-selector: 0.25rem;
-  --size-field: 0.28125rem;
-  --border: 1px;
-  --depth: 1;
-  --noise: 0;
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Special+Gothic+Expanded+One&family=Stack+Sans+Text:wght@200..700&display=swap');
+
+:root {
+  --title-font: "Special Gothic Expanded One", sans-serif;
+  --header-font: "Stack Sans Text", sans-serif;
+  --text-font: "JetBrains Mono", monospace;
+
+  --primary: #fffeff;
+  --secondary: #010e25; /*dark navy*/
+  --accent: #98a0c8;
+  --accent-content: #243789;
+  --neutral: #6e6a70;
+  --info: #4a5996;
+  --success: #76B090;
+  --success-content: #004c39;
 }
