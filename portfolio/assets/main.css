@@ -1,13 +1,14 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
- 
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Special+Gothic+Expanded+One&family=Stack+Sans+Text:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@900&family=Playfair+Display:wght@400..900&family=Sora:wght@100..800&family=Special+Gothic+Expanded+One&family=Stack+Sans+Text:wght@200..700&family=Unica+One&display=swap');
+@import "tailwindcss";
+
 
 :root {
   --title-font: "Special Gothic Expanded One", sans-serif;
+  --bold-font: "Outfit", sans-serif;
   --header-font: "Stack Sans Text", sans-serif;
-  --text-font: "JetBrains Mono", monospace;
+  --text-font: "Sora", sans-serif;
+  --text-option-font: "Unica One", sans-serif;
+  --serif-font: "Playfair Display", serif;
 
   --primary: #fffeff;
   --secondary: #010e25; /*dark navy*/
@@ -17,4 +18,29 @@
   --info: #4a5996;
   --success: #76B090;
   --success-content: #004c39;
+}
+
+.title-font {
+  font-family: var(--title-font);
+}
+
+.bold-font {
+  font-family: var(--bold-font);
+}
+
+.header-font {
+  font-family: var(--header-font);
+}
+
+.text-font {
+  font-family: var(--text-font);
+}
+
+.text-option-font {
+  font-family: var(--text-option-font);
+}
+
+.serif-font {
+  font-family: var(--serif-font);
+  font-style: italic;
 }
