@@ -1,11 +1,11 @@
 <template>
   <div>
-    <Homepage />
+    <Intropage />
   </div>
 </template>
 
 <script setup lang="ts">
-import Homepage from './components/homepage.vue'
+import Intropage from './components/intropage.vue'
 </script>
 
 <style scoped></style>
