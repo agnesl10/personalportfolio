@@ -13,48 +13,41 @@
     </div>
 
     <div class="homepage topbar absolute top-0 right-0 flex items-center px-10 py-6 opacity-0">
-      <Navbar />
+      <Homepage />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import Navbar from './navbar.vue'
+// @ts-ignore: some .vue modules may lack a default export in TS typings; runtime default exists
+import Homepage from './homepage.vue'
 import { gsap } from 'gsap'
 import { onMounted } from 'vue'
 
 onMounted(() => {
   const tl = gsap.timeline()
 
-  // intro animations
   tl.from('.intro', {
     x: -40,
     opacity: 0,
     duration: 1,
   })
-
     .from('.name', {
       x: 40,
       opacity: 0,
       duration: 1,
     })
-
     .from('.desc', {
       y: 20,
       opacity: 0,
       duration: 0.8,
     })
-
-    // wait a second
     .to({}, { duration: 1 })
-
-    // fade intro + desc out
     .to('.intro', {
       opacity: 0,
       y: -20,
       duration: 0.5,
     })
-
     .to(
       '.desc',
       {
@@ -65,20 +58,28 @@ onMounted(() => {
       '<',
     )
 
-    // move name to top left
-    .to(
-      '.name',
-      {
-        x: -667,
-        y: -400,
-        scale: 0.5,
-        duration: 1.2,
-        ease: 'power3.inOut',
-      },
-      '-=0.2',
-    )
+    .to('.name', {
+      duration: 1.2,
+      scale: 0.5,
+      ease: 'power3.inOut',
 
-    // reveal homepage
+      x: () => {
+        const name = document.querySelector('.name') as HTMLElement
+        const rect = name.getBoundingClientRect()
+
+        // same horizontal padding as navbar
+        return 40 - rect.left
+      },
+
+      y: () => {
+        const name = document.querySelector('.name') as HTMLElement
+        const rect = name.getBoundingClientRect()
+
+        // same vertical padding as navbar
+        return 24 - rect.top
+      },
+    })
+
     .to('.homepage', {
       opacity: 1,
       duration: 1,
