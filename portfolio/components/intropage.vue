@@ -4,11 +4,13 @@
     <div class="hero absolute inset-0 flex items-center justify-center">
       <div class="text-center">
         <div class="flex items-baseline justify-center space-x-4 mb-6">
-          <h2 class="intro text-5xl serif-font">hi, i'm</h2>
-          <h1 class="name text-7xl font-bold text-(--info)">agnes.</h1>
+          <h2 class="intro text-5xl serif-font text-(--primary)">hi, i'm</h2>
+          <h1 class="name text-7xl font-bold text-(--info) agnes-font">agnes.</h1>
         </div>
 
-        <p class="desc text-xl">i'm exploring web design and anything related to art.</p>
+        <p class="desc text-xl text-(--primary)">
+          i'm exploring web design and anything related to art.
+        </p>
       </div>
     </div>
 

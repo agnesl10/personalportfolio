@@ -12,6 +12,7 @@
 
   --primary: #fffeff;
   --secondary: #010e25; /*dark navy*/
+  --tertiary: #063970; /*dark gray*/
   --accent: #98a0c8;
   --accent-content: #243789;
   --neutral: #6e6a70;
@@ -20,12 +21,20 @@
   --success-content: #004c39;
 }
 
+html{
+  background-color: var(--secondary);
+}
 .title-font {
   font-family: var(--title-font);
 }
 
 .bold-font {
   font-family: var(--bold-font);
+}
+
+.agnes-font {
+  font-family: var(--header-font);
+  font-weight: 700;
 }
 
 .header-font {
