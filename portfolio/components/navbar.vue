@@ -1,17 +1,15 @@
 <template>
-  <div class="fixed top-0 left-0 w-full flex items-center justify-between px-10 py-6 z-50">
-    <!-- BRAND -->
-    <div class="text-xl serif-font">agnes.</div>
-
-    <!-- LINKS -->
-    <div class="flex gap-6 text-sm">
-      <a href="#">home</a>
-      <a href="#">work</a>
-      <a href="#">about</a>
-    </div>
+  <div>
+    <nav class="flex justify-between center p-6">
+      <div class="space-x-10 w-full text-center">
+        <a href="#about" class="hover:underline header-font text-xl">About</a>
+        <a href="#projects" class="hover:underline header-font text-xl">Projects</a>
+        <a href="#contact" class="hover:underline header-font text-xl">Contact</a>
+      </div>
+    </nav>
   </div>
 </template>
 
-<script setup lang="ts">
-// purely static navbar — no GSAP here
-</script>
+<script setup lang="ts"></script>
+
+<style scoped></style>
